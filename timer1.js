@@ -4,13 +4,13 @@
 
 let input = process.argv.splice(2);
 
-input = input.filter(num => !NaN && num > 0).
-              sort((a, b) => { return a -b;}).
-              map(x => x*1000);
+input = input.filter(num => !NaN && num > 0)
+            .sort((a, b) => a -b)
+            .map(x => x * 1000);
 
-let time = input[0];
 for (let i = 0; i < input.length; i++){
-  if (input === undefined) {
+  let time = input[i];
+  if (!input) {
     return;
   } 
   setTimeout(() => {
